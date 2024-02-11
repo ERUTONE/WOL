@@ -4,7 +4,7 @@ RUN apt-get update \
     iputils-ping \
     wakeonlan
 RUN a2enmod rewrite
-WORKDIR /www/html
-COPY . /www/html/
+WORKDIR /html
+COPY . /html/
 EXPOSE 80
 CMD ["apache2ctl", "-D", "FOREGROUND"]
